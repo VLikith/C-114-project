@@ -1,0 +1,10 @@
+h3{
+   font-size: 25px;
+
+}
+.btn-success:hover{
+    background-color: rgb(2, 185, 2);
+}
+body{
+    background-size: cover;
+}
