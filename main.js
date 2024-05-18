@@ -1,8 +1,11 @@
 var canvas1;
 var webcam1;
 var storemodel;
+var nosex=0;
+var nosey=0;
+var img1;
 function preload(){
-        
+        img1=loadImage("m.png")
 }
 function setup(){
     canvas1=createCanvas(300, 300);
@@ -18,6 +21,8 @@ function gotposes(result){
         console.log(result);
         console.log("nose x= "+result[0].pose.nose.x);
         console.log("nose y= "+result[0].pose.nose.y);
+        nosex=result[0].pose.nose.x;
+        nosey=result[0].pose.nose.y;
     }
 }
 function modelstart(){
@@ -28,4 +33,5 @@ function click(){
 }
 function draw(){
     image(webcam1, 0, 0, 300, 300);
+    image(img1, nosex-22, nosey, 45, 35);
 }
