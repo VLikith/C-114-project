@@ -28,7 +28,7 @@ function gotposes(result){
 function modelstart(){
     console.log("Model loaded");
 }
-function click(){
+function picclick(){
     save("picture.png");
 }
 function draw(){
